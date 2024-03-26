@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const courseData = mongoose.Schema({
+const CourseData = mongoose.Schema({
     posterPath:{
         type: String,
         required:true
@@ -23,4 +23,4 @@ const courseData = mongoose.Schema({
     },
 })
 
-module.exports = mongoose.model('courseDataInformation', courseData);
+module.exports = mongoose.model('courseDataInformation', CourseData);
