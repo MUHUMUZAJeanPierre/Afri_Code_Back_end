@@ -1,5 +1,2 @@
-import mongoose from "mongoose";
-
-const StudentData = mongoose.Schema({
-    
-})
+const 
+const mongoose = require('mongoose');
