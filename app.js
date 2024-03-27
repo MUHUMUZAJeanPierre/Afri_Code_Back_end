@@ -11,6 +11,6 @@ app.use(express.json());
 app.use('/api/user', Routes);
 app.use('/api/course',courseRoute)
 app.listen(4000, ()=>{
-    mongoose.connect('mongodb://localhost:27017/StudentRegistrations')
+    mongoose.connect('mongodb+srv://umuduguduhub:Umuduguduhub123@cluster0.xyw1fla.mongodb.net/umuduguduhub')
     .then(console.log('server listening on http://localhost:27017/StudentRegistrations'))
 })
