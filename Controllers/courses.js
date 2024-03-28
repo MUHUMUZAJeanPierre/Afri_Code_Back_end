@@ -2,6 +2,7 @@ const CourseData=require("../Modules/CourseModule")
 
 const createCourse = async (req,res,next)=>{
     try {
+        console.log(req.body);
         const {posterPath, courseName, courseTitles, courseDescription, courseTeacher, content} = req.body;
         var alreadyExist = await CourseData.findOne({courseName:courseName})
         if(alreadyExist == null){

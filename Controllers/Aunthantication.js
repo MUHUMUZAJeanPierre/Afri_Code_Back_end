@@ -16,10 +16,10 @@ const signUp = async(req,res,next)=>{
                 role:"student",
             }
             const newStudentCreated = await StudentData.create(toSave);
-            res.status(200).json({message: "Student created", newStudentCreated});
+            res.status(200).json({message: "Student created",  newStudentCreated});
         }
     } catch (error) {
-        res.status(500).json({message:"error creating student", error});
+        res.status(500).json({message:"error creating student", error:error.message});
     }
 }
 
