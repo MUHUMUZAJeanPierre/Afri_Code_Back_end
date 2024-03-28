@@ -40,4 +40,23 @@ const signIn = async (req, res) => {
         console.error(error);
     }
 }
-module.exports = {signUp, signIn};
+
+const getAllStudents=async (req,res)=>{
+    try {
+        const students = await StudentData.find({});
+        res.status(200).json({message: "All students", data:students});
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+}
+
+
+const DeleteStudent =async(req,res)=>{
+    try {
+        const student = await StudentData.findByIdAndDelete(req.query.id);
+        res.status(200).json({message: "Student deleted", data:student});
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+}
+module.exports = {signUp, signIn,getAllStudents,DeleteStudent};
