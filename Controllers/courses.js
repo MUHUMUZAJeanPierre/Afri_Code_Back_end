@@ -41,7 +41,7 @@ const listAllCourse =async (req,res,next)=>{
 
 const FindOneCourse= async (req,res,next)=>{
     try {
-        const course = await CourseData.findOne({courseName: req.query.courseName});
+        const course = await CourseData.findOne({_id: req.query.id});
         res.status(200).json({message: "Course found", course});
         
     } catch (error) {
