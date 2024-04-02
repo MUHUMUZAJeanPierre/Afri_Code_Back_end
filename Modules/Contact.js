@@ -15,4 +15,4 @@ const FeedbackInfo = mongoose.Schema({
     }
 });
  
-module.exports = mongoose.model('courseDataInformation', FeedbackInfo);
+module.exports = mongoose.model('FeedbackInformation', FeedbackInfo);
