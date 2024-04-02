@@ -61,9 +61,10 @@ const deleteCourse = async (req,res,next)=>{
 
 const updateCourse =async (req,res,next)=>{
     try {
-        const exist= await CourseData.findOne({courseName: req.query.courseName})
-        if(exist !=null){
-            const course = await CourseData.findOneAndUpdate({courseName: req.query.courseName}, req.body);
+        const exist= await CourseData.findOne({_id:req.query.id})
+        console.log(exist);
+        if(exist!=null){
+            const course = await CourseData.findOneAndUpdate({_id:req.query.id}, req.body);
             res.status(200).json({message: "Course updated", course:course});
             
 

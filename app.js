@@ -13,7 +13,7 @@ app.use(cors());
 
 
 app.use('/api/user', Routes);
-app.use('/api/course',courseRoute)
+app.use('/api/course',courseRoute);
 app.listen(4000, ()=>{
     mongoose.connect(process.env.MONGO_URL)
     .then(console.log('server listening on http://localhost:27017/StudentRegistrations'))
