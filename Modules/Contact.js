@@ -1,4 +1,4 @@
-const mongoose = require('mngoose');
+const mongoose = require('mongoose');
 
 const FeedbackInfo = mongoose.Schema({
     email:{
