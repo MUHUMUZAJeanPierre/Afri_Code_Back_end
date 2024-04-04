@@ -31,7 +31,7 @@ const signIn = async (req, res) => {
             if(validate){
                 const secret = "secreteNumber"
                 const token  =  jwt.sign({id: already._id}, secret,{expiresIn:200000000000000000000000000000000});
-                res.status(200).json({message:'success student log in', token});
+                res.status(200).json({message:'success student log in', token,role:already.role});
             } else{
                 res.status(400).json({message: "Password is incorrect", error});   
             }
